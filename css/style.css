@@ -1,0 +1,286 @@
+/* Variáveis */
+
+:root {
+    --cor-primaria: #ff7200;
+    --cor-secundaria: #fff;
+    --fonte-primaria: Arial, Helvetica, sans-serif;
+    --fonte-secundaria: 'Times New Roman', Times, serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+    padding: 0 5%;
+
+    background: linear-gradient(to top, rgb(0 0 0 /0.65) 50%, rgb(0 0 0 / 0.65) 50%), url("../images/background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+*::placeholder {
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-primaria);
+}
+
+/* Header */
+
+.header {
+    padding-top: 10px;
+    height: 60px;
+}
+
+.header .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .nav .logo {
+    display: flex;
+}
+
+.header .nav .logo h2 {
+    color: var(--cor-primaria);
+    font-size: 35px;
+    font-family: var(--fonte-primaria);
+}
+
+.header .nav .menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.header .nav .menu ul li {
+    padding: 0 20px;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.header .nav .menu ul li a {
+    font-family: var(--fonte-primaria);
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    font-weight: bold;
+    transition: 0.4s ease-in-out color;
+}
+
+.header .nav .menu ul li a:hover {
+    color: var(--cor-primaria);
+}
+
+.header .nav .searchBar {
+    display: flex;
+    border-radius: 5px;
+}
+
+.header .nav .searchBar input {
+    background: none;
+    outline: none;
+    border: 1px solid var(--cor-primaria);
+    font-size: 16px;
+    color: var(--cor-secundaria);
+
+    border-top-left-radius: inherit;
+    border-bottom-left-radius: inherit;
+    padding-left: 12px;
+}
+
+.header .nav .searchBar button {
+    all: unset;
+
+    width: 100%;
+    height: 100%;
+    font-family: var(--fonte-primaria);
+    color: var(--cor-secundaria);
+    background-color: var(--cor-primaria);
+    padding: 10px 28px;
+    font-size: 20px;
+
+    border-top-right-radius: inherit;
+    border-bottom-right-radius: inherit;
+
+    cursor: pointer;
+}
+
+
+/* Main Content Section */
+
+/* Left Side*/
+
+.content {
+    display: flex;
+
+    width: 100%;
+    height: calc(100vh - 60px);
+    column-gap: 10%;
+}
+
+.content .leftSide {
+    width: 70%;
+    height: auto;
+    margin: auto 0;
+}
+
+.content .leftSide h1 {
+    font-family: var(--fonte-secundaria);
+    font-size: 50px;
+    letter-spacing: 2px;
+    color: var(--cor-secundaria);
+}
+
+.content .leftSide h1 span {
+    color: var(--cor-primaria);
+    font-size: 60px;
+}
+
+.content .leftSide p {
+    font-family: var(--fonte-primaria);
+    letter-spacing: 1.2px;
+    line-height: 30px;
+    color: var(--cor-secundaria);
+}
+
+.content .leftSide button {
+    all: unset;
+
+    text-transform: uppercase;
+    font-family: var(--fonte-primaria);
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    padding: 12px 60px;
+    font-size: 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+
+    transition: 0.4s ease-in-out all;
+    cursor: pointer;
+}
+
+.content .leftSide button a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.content .leftSide button:hover {
+    background-color: #fff;
+    color: #111;
+}
+
+/* Right Side*/
+
+.content .rightSide {
+    width: 30%;
+    height: auto;
+    margin: auto 0;
+
+    background: linear-gradient(to top, rgb(0 0 0 / 0.8) 50%, rgb(0 0 0 / 0.8) 50%);
+    padding: 25px;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.content .rightSide form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.content .rightSide form fieldset {
+    all: unset;
+
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
+    font-family: sans-serif;
+    font-size: 22px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 12px 0;
+}
+
+.content .rightSide form input {
+    all: unset;
+
+    color: var(--cor-secundaria);
+    border-bottom: 1px solid var(--cor-primaria);
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    padding: 8px 0;
+}
+
+.content .rightSide form button {
+    all: unset;
+
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    
+    font-family: sans-serif;
+    font-size: 18px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 12px 0;
+
+    transition: 0.4s ease all;
+
+    cursor: pointer;
+}
+
+.content .rightSide form button:hover {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
+}
+
+.content .rightSide .rightBottomSide {
+    display: flex;
+    flex-direction: column;
+
+    row-gap: 14px;
+}
+
+.content .rightSide .rightBottomSide p, .content .rightSide .rightBottomSide span {
+    font-family: var(--fonte-primaria);
+    color: var(--cor-secundaria);
+    font-size: 16px;
+    text-align: center;
+}
+
+.content .rightSide .rightBottomSide p a {
+    text-decoration: none;
+    color: var(--cor-primaria);
+}
+
+.content .rightSide .rightBottomSide p a:hover {
+    text-decoration: underline
+}
+
+.content .rightSide .rightBottomSide .socialMedia {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.content .rightSide .rightBottomSide .socialMedia a {
+    text-decoration: none;
+    color: var(--cor-secundaria)
+}
+
+.content .rightSide .rightBottomSide .socialMedia ion-icon {
+    color: var(--cor-secundaria);
+    font-size: 30px;
+    transition: 0.3s ease color;
+}
+
+.content .rightSide .rightBottomSide .socialMedia ion-icon:hover {
+    color: var(--cor-primaria);
+}
